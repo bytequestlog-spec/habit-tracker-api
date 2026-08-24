@@ -18,7 +18,14 @@ function authMiddleware(req, res, next) {
 }
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "https://habittracker-six-rho.vercel.app",
+      "http://localhost:5173",
+    ],
+  }),
+);
 app.use(express.json());
 
 app.use((req, res, next) => {
