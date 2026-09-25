@@ -145,6 +145,8 @@ app.post("/signup", async (req, res) => {
     const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET);
     res.json({ token, user });
   } catch (err) {
+    console.error("SIGNUP ERROR:", err);
+
     if (err.code === "23505") {
       res.status(400).json({ error: "Email already exists" });
     } else {
