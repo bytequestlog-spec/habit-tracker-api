@@ -22,6 +22,7 @@ app.use(
   cors({
     origin: [
       "https://habittracker-six-rho.vercel.app",
+      "https://ellie-habit-tracker.vercel.app",
       "https://elliehabittracker-lpyv9ft8a-bytequestlog-spec.vercel.app",
       "https://elliehabittracker-pxpoo5c7h-bytequestlog-spec.vercel.app",
       "http://localhost:5173",
